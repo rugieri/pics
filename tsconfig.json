@@ -1,23 +1,38 @@
 {
-	"compilerOptions": {
-		"baseUrl": "./src",
-		"moduleResolution": "node",
-		"allowSyntheticDefaultImports": true,
-		"noEmit": false,
-		"noEmitOnError": false,
-		"alwaysStrict": true,
-		"esModuleInterop": true,
-		"module": "commonjs",
-		"noImplicitAny": true,
-		"target": "ES6",
-		"removeComments": true,
-		"preserveConstEnums": true,
-		"outDir": "./dist",
-		"rootDir": "./src/",
-		"sourceMap": true,
-		"lib": ["es6", "dom", "es2017", "es7"],
-		"resolveJsonModule": true,
-		"experimentalDecorators": true,
-		"emitDecoratorMetadata": true
-	}
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "noEmit": true,
+    "noEmitOnError": false,
+    "alwaysStrict": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "noImplicitAny": true,
+    "target": "ES6",
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "outDir": "./dist",
+    "rootDir": "./src/",
+    "sourceMap": true,
+    "lib": [
+      "es6",
+      "dom",
+      "es2017",
+      "es7"
+    ],
+    "resolveJsonModule": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx"
+  },
+  "include": [
+    "src"
+  ]
 }
