@@ -1,14 +1,20 @@
 import React from 'react';
 
+interface IState {
+  term: string
+}
 
-class SearchBar extends React.Component{
+interface IProps {
+  onSubmit: (term: string) => Promise<void>
+}
+class SearchBar extends React.Component<IProps, IState>{
   state = { term: '' };
-  onFormSubmit = (event: { preventDefault: () => void }) => {
+  onFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     this.props.onSubmit ( this.state.term);
     
   };
-  
+  handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {this.setState({term: event.target.value})}
   render() {
     return (
       <div className="ui segment">
@@ -18,7 +24,7 @@ class SearchBar extends React.Component{
             <input
               type="text" 
               value={this.state.term}
-              onChange={(e) => this.setState({ term: e.target.value })}
+              onChange={this.handleChange}
             />
           </div>
         </form>
