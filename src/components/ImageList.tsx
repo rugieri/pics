@@ -4,8 +4,8 @@ interface IProps {
   images: IImage[]
 }
 const ImageList: React.FunctionComponent<IProps> = props =>{
-  const imageElements = props.images.map((image)=> {
-    return <img src ={image.urls.regular} />
+  const imageElements = props.images.map(({description, id, urls})=> {
+    return <img alt={description} key={id} src ={urls.regular} />
   })
   return <div className = "image-list">{imageElements}</div>
   };
