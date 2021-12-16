@@ -1,15 +1,18 @@
-import React from 'react';
+import * as React from 'react';
 import { IImage } from '../types/ImageType'
 
 interface IState {
   spans: number
+  
 }
 
 interface IProps {
   image: IImage
   }
+
+
 class ImageCard extends React.Component<IProps, IState> {
-  imageRef = React.createRef<HTMLImageElement>();
+  imageRef = React.createRef<HTMLImageElement | any>();
   state = {spans: 0}
   
   componentDidMount(){

@@ -8,7 +8,7 @@ export interface IImage {
   color?: string;
   description?: string;
   alt_description?: string;
-  urls?: IImageUrls;
+  urls: IImageUrls;
   links?: IImageLinks;
   categories?: Array<any>; //todo
   likes?: number;
@@ -19,11 +19,11 @@ export interface IImage {
 }
 
 interface IImageUrls {
-  raw: string;
-  full: string;
-  regular: string;
-  small: string;
-  thumb: string;
+  raw?: string;
+  full?: string;
+  regular?: string;
+  small?: string;
+  thumb?: string;
 }
 
 interface IImageLinks {
